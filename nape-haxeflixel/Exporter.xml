@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<exporter>
+	<!-- identifier of the exporter -->
+	<name>nape-haxeflixel</name>
+
+	<!-- name for the dropbox -->
+	<displayName>Nape (HaxeFlixel)</displayName>
+	
+	<!-- description of the exporter -->
+	<description>Nape for HaxeFlixel</description>
+
+	<!-- exporter version -->
+	<version>1.0</version>
+
+	<!-- directino of the y axis: up / down -->
+	<yAxisDirection>down</yAxisDirection>
+
+	<!-- physics engine to use: box2d, chipmunk -->
+	<physicsEngine>generic</physicsEngine>
+
+	<!-- name of the template file -->
+	<template>nape_flixel.hx</template>
+
+	<!-- file extension for the data file -->
+	<fileExtension>hx</fileExtension>
+
+	<!-- anchor point settings -->
+	<anchorPoint>
+		<!-- are anchor points supported ? yes/no -->
+		<enabled>no</enabled>
+
+		<!-- relative positino of the default anchor point -->
+		<relX>0.5</relX>
+		<relY>0.5</relY>
+	</anchorPoint>
+
+	<origin>
+        <!--
+        origin (0/0) point of the polygons 
+        can be set to "anchorPoint" or "fixed"
+        Use 
+		<relX>0.5</relX>		
+		<relY>0.5</relY>
+		to specify a fixed origin.
+		Default is 0.5/0.5
+        -->
+        <type>anchorPoint</type>
+	</origin>
+
+	<!-- custom global parameters -->
+	<global>
+		<parameter>
+			<name>class_name</name>
+			<displayName>Class Name</displayName>
+			<description>This name will be used for naming the exported class.</description>
+			<shortDescription>This name will be used for naming the exported class.</shortDescription>
+			<type>string</type>
+			<default>PhysicsFactory</default>
+		</parameter>
+		
+		<parameter>
+			<name>v4</name>
+			<displayName>Use HaxeFlixel ver 4</displayName>
+			<description>Check if you want to export for HaxeFlixel ver 4 or above.</description>
+			<shortDescription>Check if you want to export for HaxeFlixel ver 4 or above.</shortDescription>
+			<type>bool</type>
+			<default>false</default>
+		</parameter>
+	</global>
+
+	<!-- custom body parameters -->
+	<body>
+		<parameter>
+			<name>label</name>
+			<displayName>Label</displayName>
+			<description>This label will be used for naming the function to create this body.</description>
+			<shortDescription>This label will be used for naming the function to create this body.</shortDescription>
+			<type>string</type>
+			<default>object</default>
+		</parameter>
+		
+		<parameter>
+			<name>graphic</name>
+			<displayName>Graphic (raw code)</displayName>
+			<description>The graphic that will be used by the sprite of this body. This is raw code.</description>
+			<shortDescription>The graphic that will be used by the sprite of this body.</shortDescription>
+			<type>string</type>
+			<default>AssetPaths.object_graphic__png</default>
+		</parameter>
+		
+		<parameter>
+			<name>type</name>
+			<displayName>Type</displayName>
+			<description>The type of this body (DYNAMIC, KINEMATIC or STATIC).</description>
+			<shortDescription>The type of this body (DYNAMIC, KINEMATIC or STATIC).</shortDescription>
+			<type>string</type>
+			<default>DYNAMIC</default>
+		</parameter>
+	</body>
+	
+
+</exporter>
