@@ -1,5 +1,5 @@
 
-####Nape (HaxeFlixel) exporter for PhysicsEditor
+####Nape-HaxeFlixel exporter for PhysicsEditor
 
 ######How to Use
 
