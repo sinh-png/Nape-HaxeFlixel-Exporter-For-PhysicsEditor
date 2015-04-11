@@ -39,7 +39,7 @@ class {{global.class_name}} {
 		{% for fixture in body.fixtures %}{% if fixture.isCircle %}new Circle({{fixture.radius}}, Vec2.weak({{fixture.center.x}}, {{fixture.center.y}})).body = body;
 		{% else %}{% for polygon in fixture.polygons %}new Polygon([{% for point in polygon %}{% if not forloop.first %}, {% endif %}Vec2.weak({{point.x}}, {{point.y}}){% endfor %}]).body = body;
 		{% endfor %}{% endif %}{% endfor %}
-		return _applyBody(X, Y, Sprite, {{body.graphic}}, AntiAliasing, body, BodyMaterial);
+		return _applyBody(X, Y, Sprite, Graphic == Null ? {{body.graphic}} : Graphic, AntiAliasing, body, BodyMaterial);
 	}
 	{% endfor %}
 }
